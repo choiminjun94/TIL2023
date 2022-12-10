@@ -34,6 +34,8 @@ HTML5 핵심 태그 정리한 것
 </ol>
 
 ```
+![image](https://user-images.githubusercontent.com/60457431/206841017-c7f51f05-ba3f-4ece-a329-8dd38a10be51.png)
+
 
 순서가 없는 목록 : ul > li 
 
@@ -45,6 +47,7 @@ HTML5 핵심 태그 정리한 것
     <li>List4</li>
 </ul>
 ```
+![image](https://user-images.githubusercontent.com/60457431/206841029-5b0c2484-197a-475e-a053-937b3dc76437.png)
 
 li의 자식 만들기
 
@@ -56,3 +59,4 @@ li의 자식 만들기
     </ul>
 </li>
 ```
+![image](https://user-images.githubusercontent.com/60457431/206841039-433b0d16-4462-4b65-8f17-8538175fd3ec.png)
