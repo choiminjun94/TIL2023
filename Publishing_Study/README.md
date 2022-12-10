@@ -1,4 +1,5 @@
 # 2022.12.10 
+
 ## HTML 핵심만 정리 
 ``` js 
 
@@ -20,3 +21,38 @@ HTML5 핵심 태그 정리한 것
 8. sub,sup 태그
 
 
+## HTML5 헥심 태그 - (목록 만들기)
+
+``` html
+순서가 있는 목록 ol > li 
+
+<ol>
+    <li>List1</li>
+    <li>List2</li>
+    <li>List3</li>
+    <li>List4</li>
+</ol>
+
+```
+
+순서가 없는 목록 : ul > li 
+
+``` html
+<ul>
+    <li>List1</li>
+    <li>List2</li>
+    <li>List3</li>
+    <li>List4</li>
+</ul>
+```
+
+li의 자식 만들기
+
+``` html 
+<li>
+    <ul>맛집
+        <li>초밥</li>
+        <li>돈까스</li>
+    </ul>
+</li>
+```
