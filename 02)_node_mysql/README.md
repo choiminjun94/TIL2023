@@ -18,6 +18,7 @@ npm install express  --sav
 npm install express-handlebars --save
 npm install express-myconnection
 npm install body-parser
+npm install nodemon
 ``` 
 
 ### 1.1) 패키지 설명 
@@ -65,5 +66,6 @@ git rm -r --cached .
 git add .
 git commit -am "멘트 "
 ``` 
-하이
+
+## 포트 확인
 
