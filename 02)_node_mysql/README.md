@@ -53,7 +53,7 @@ body-parser : 미들웨어이다. 즉, 요청(request)과 응답(response) 사�
 
 ### 1.2) Package.json 
 
-![image](https://user-images.githubusercontent.com/60457431/209468297-c52b4b89-9c26-48fe-81cd-1148e386aeb1.png)
+![image](https://user-images.githubusercontent.com/60457431/209468904-f606b601-e961-4ad9-b403-230273558c31.png)
 
 ### 2) gitignore 작성
 
@@ -66,6 +66,10 @@ git rm -r --cached .
 git add .
 git commit -am "멘트 "
 ``` 
+
+## package.json scripts 수정
+
+![image](https://user-images.githubusercontent.com/60457431/209468925-afbb0f5a-9b2d-4e69-b109-be0a76dc86a6.png)
 
 ## 포트 확인
 
@@ -85,3 +89,4 @@ app.listen(app.get('port'), () =>{
 })
 
 ```
+![image](https://user-images.githubusercontent.com/60457431/209468940-ec4b710c-9c82-4f19-a24b-cb8eb52dad1c.png)
