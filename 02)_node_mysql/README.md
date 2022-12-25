@@ -46,7 +46,7 @@ express-myconnection : 요청/응답 수명 주기 동안 MySQL 연결을 위한
 
 ``` js 
 
-body-parser는 미들웨어이다. 즉, 요청(request)과 응답(response) 사이에서 공통적인 기능을 수행하는 소프트웨어이다. 그렇다면 역할은 무엇일까? 바로 요청의 본문을 지정한 형태로 파싱해주는 미들웨어이다.
+body-parser : 미들웨어이다. 즉, 요청(request)과 응답(response) 사이에서 공통적인 기능을 수행하는 소프트웨어이다. 그렇다면 역할은 무엇일까? 바로 요청의 본문을 지정한 형태로 파싱해주는 미들웨어이다.
 
 ```
 
@@ -64,4 +64,5 @@ git rm -r --cached .
 git add .
 git commit -am "멘트 "
 ``` 
+하이
 
