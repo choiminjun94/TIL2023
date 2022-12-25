@@ -1,4 +1,4 @@
-# 2022.12.25
+# 2022.12.25 
 
 ## 출석체크 프로그램 
 <br/>
@@ -52,10 +52,11 @@ body-parser : 미들웨어이다. 즉, 요청(request)과 응답(response) 사�
 
 ### 1.2) Package.json 
 
+![image](https://user-images.githubusercontent.com/60457431/209468297-c52b4b89-9c26-48fe-81cd-1148e386aeb1.png)
 
 ### 2) gitignore 작성
 
-
+![image](https://user-images.githubusercontent.com/60457431/209468310-fd2e6866-9c97-4082-9aaf-f02c84f9649d.png)
 
 ## git ignore 적용 안될때 
 
