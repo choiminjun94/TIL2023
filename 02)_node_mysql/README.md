@@ -103,7 +103,7 @@ npm install path --save
 ``` 
 ### 파일 구성 
 
-// 사진 추가 
+![image](https://user-images.githubusercontent.com/60457431/209553537-75807d30-45af-4713-b57a-35975cdad3af.png)
 
 ### router 폴더의 역할 
 ``` js
@@ -234,3 +234,5 @@ module.exports = app;
 12) 화면을 렌더링 실시
 
 ```
+
+![image](https://user-images.githubusercontent.com/60457431/209553584-9748d968-c897-4bb7-bc35-fa2a7d7c3d78.png)
