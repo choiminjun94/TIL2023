@@ -236,3 +236,18 @@ module.exports = app;
 ```
 
 ![image](https://user-images.githubusercontent.com/60457431/209553584-9748d968-c897-4bb7-bc35-fa2a7d7c3d78.png)
+
+# 2023.01.01
+
+## 파일구성 
+
+![image](https://user-images.githubusercontent.com/60457431/210172877-afdd5c6c-18a1-492d-9c07-ecf4fe4f6da5.png)
+
+
+### header.js 
+
+- 내용 설명
+
+### 실행 사진
+
+![image](https://user-images.githubusercontent.com/60457431/210172897-3366ed8d-aa22-467d-ac3f-657bcf9f6022.png)
