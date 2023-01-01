@@ -243,6 +243,24 @@ module.exports = app;
 
 ![image](https://user-images.githubusercontent.com/60457431/210172877-afdd5c6c-18a1-492d-9c07-ecf4fe4f6da5.png)
 
+### 추가 파일 
+
+``` js 
+
+frontend/public/js/header.js
+frontend/public/stylesheets/header.css
+frontend/public/stylesheets/index.css
+frontend/view/header.html
+
+``` 
+
+### 수정파일 
+
+```js
+
+frontend/view/index.html
+
+```
 
 ### header.js 
 
