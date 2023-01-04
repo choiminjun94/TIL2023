@@ -1,6 +1,11 @@
-## PortFolio 사이트 뉴리뉴얼
+## PortFolio 사이트 뉴리뉴얼 
+
+### 2023.01.04
 
 ### 파일구성도
+
+![image](https://user-images.githubusercontent.com/60457431/210572355-dcba35e1-c679-4ab9-a0fd-1b140530a975.png)
+
 
 파일 추가
 
@@ -87,3 +92,7 @@ header{
 ``` 
 
 ### 금일 공부한 CSS 정리
+
+
+### 화면 
+![image](https://user-images.githubusercontent.com/60457431/210572470-74a9e5b5-201c-47ea-9156-4ef93340ac11.png)
