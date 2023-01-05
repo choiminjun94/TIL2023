@@ -5,7 +5,9 @@ body{
     width: 100%;
     height: 100%;
     overflow: auto;
-    font : 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    /* font : 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+    font-family: 'Hi Melody', cursive;
+    font-family: 'Song Myung', serif;
 }
 header{
     position: fixed;
