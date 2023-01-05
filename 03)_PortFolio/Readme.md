@@ -115,3 +115,7 @@ overflow : 요소의 박스에 내용이 더 길 때 어떻게 보일지 선택�
 
 ### 화면 
 ![image](https://user-images.githubusercontent.com/60457431/210572470-74a9e5b5-201c-47ea-9156-4ef93340ac11.png)
+
+### 2023.01.05
+
+> 기존 폰트 구글 폰트로 수정
