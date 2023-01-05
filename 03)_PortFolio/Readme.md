@@ -181,4 +181,5 @@ overflow : 요소의 박스에 내용이 더 길 때 어떻게 보일지 선택�
 
 ``` 
 
+![image](https://user-images.githubusercontent.com/60457431/210803967-1ffdbb97-d317-4073-be83-385dceef6aeb.png)
 
