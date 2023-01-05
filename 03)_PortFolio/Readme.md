@@ -116,6 +116,69 @@ overflow : 요소의 박스에 내용이 더 길 때 어떻게 보일지 선택�
 ### 화면 
 ![image](https://user-images.githubusercontent.com/60457431/210572470-74a9e5b5-201c-47ea-9156-4ef93340ac11.png)
 
-### 2023.01.05
+## 2023.01.05
 
 > 기존 폰트 구글 폰트로 수정
+
+### 배너 추가 
+
+``` html 
+
+<body>
+    <div>
+        <header id="header">
+            <div id="headerContainer">
+                <div id="logo">MJ Books</div>
+                    <ul id="hc">
+                        <li><a href=""> About Me</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href=""> Project</a></li>
+                        <li><a href="">Career</a></li>
+                    </ul>
+            </div>
+        </header>
+    </div>
+    <div style="position: relative;">
+        <img id="imageContainer" src="public/images/banner.jpg">
+        <div id="myText">
+            <div id="myname">최민준</div>
+            <div id="MWM">프론트엔트</div>
+            <p id="middletext">ㅡ</p>
+            <p style="margin: 5px 0;">안녕하세요</p><p style="margin: 5px 0;">제가 좋아하는것만 하는 프론트엔드 개발자</p>
+        </div>
+    </div>
+
+```
+
+``` css 
+
+/* 배너 */
+#imageContainer {
+    width: 100%;
+    height: 500px;
+    filter: opacity(50%);
+}
+#myText{
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    transform: translate(-50%,-50%);
+    width:100%;
+    text-align: center;
+}
+#myText div{
+    font-size: 50px;
+    font-weight: 600;
+}
+#myText p{
+    font-weight: bold;
+}
+#middletext{
+    color: darkblue;
+}
+
+``` 
+
+
