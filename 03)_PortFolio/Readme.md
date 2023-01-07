@@ -183,3 +183,170 @@ overflow : 요소의 박스에 내용이 더 길 때 어떻게 보일지 선택�
 
 ![image](https://user-images.githubusercontent.com/60457431/210803967-1ffdbb97-d317-4073-be83-385dceef6aeb.png)
 
+## 2023.01.06 
+
+### aboutMe 
+
+### aboutMe.js 
+``` js 
+$(document).ready(function(){
+    document.getElementById("aboutMe").innerHTML
+    ='<object type="text/html" data="./view/aboutMe.html" style="width:100%; height:100%;"></object>';
+    document.getElementById("aboutMe").style.height="500px"
+})
+```
+### aboutMe.html 
+
+``` html
+
+<body>
+    <div id="aboutMe">
+        <h2 id="HeaderStyle">About Me</h2>
+        <div id="myInfo">
+            <!-- Name -->
+            <div id="profileContainer" class="Container">
+                <img id="profile" class="img1" src="../public/images/profilephoto.png"/>
+                <div class="rightContainer">
+                    <div>이름</div>
+                    <div>최민준</div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="Container">
+                <img id="calendarIcon" class="img2" src="../public/images/callendar.png"/>
+                <div class="rightContainer">
+                    <div>생년월일</div>
+                    <div>1993.06.24</div>
+                </div>
+            </div>
+            <div class="Container">
+                <img class="img1" src="../public/images/phone.png"/>
+                <div class="rightContainer">
+                    <div>연락처</div>
+                    <div>010-3814-7827</div>
+                </div>
+            </div>
+            <div class="Container">
+                <img id="email" class="img2" src="../public/images/email.png"/>
+                <div class="rightContainer">
+                    <div>이메일</div>
+                    <div>1020alswns@gmail.com</div>
+                </div>
+            </div>
+            <div class="Container">
+                <img id="location" class="img2" src="../public/images/location.png"/>
+                <div class="rightContainer">
+                    <div>주소지</div>
+                    <div>서울특별시 관악구</div>
+                </div>
+            </div>
+            <div class="Container">
+                <img id="study" class="img3" src="../public/images/study.png"/>
+                <div class="rightContainer">
+                    <div>학력</div>
+                    <div>동국대학교</div>
+                    <div>(전자정보통신공학과)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+```
+
+### aboutMe.css
+
+```css
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* font : 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+    font-family: 'Hi Melody', cursive;
+    font-family: 'Song Myung', serif;
+}
+/* Header */
+header{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top:0;
+    background-color: transparent;
+    z-index: 1;
+}
+#headerContainer{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+    font-size: 24px;
+}
+#hc{
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    right: 0;
+    padding-right: 40px;
+    justify-content: space-between;
+}
+#hc a{
+    text-decoration-line: none;
+    color: black;
+    margin-right: 20px;
+    font-size: 20px;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+/* 배너 */
+#imageContainer {
+    width: 100%;
+    height: 500px;
+    filter: opacity(50%);
+}
+#myText{
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    transform: translate(-50%,-50%);
+    width:100%;
+    text-align: center;
+}
+#myname {
+    font-size: 50px;
+    font-weight: 600;
+}
+#myText p{
+    font-weight: bold;
+}
+#middletext{
+    color: darkblue;
+}
+``` 
+### index.html
+
+``` html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ... 
+
+    <script src="public/js/aboutMe.js"></script>
+
+</head>
+<body>
+  ... 
+    <div id="aboutMe"></div>
+
+</body>
+</html>
+
+```
