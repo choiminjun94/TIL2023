@@ -185,7 +185,11 @@ overflow : 요소의 박스에 내용이 더 길 때 어떻게 보일지 선택�
 
 ## 2023.01.06 
 
-### aboutMe 
+### aboutMe 작업
+
+### 파일구성 
+
+![image](https://user-images.githubusercontent.com/60457431/211126304-62fc5ce5-94b6-4097-8340-6b1ee0a7eb08.png)
 
 ### aboutMe.js 
 ``` js 
@@ -350,3 +354,6 @@ header{
 </html>
 
 ```
+
+### 결과파일 
+![image](https://user-images.githubusercontent.com/60457431/211126325-b1e04c11-94e9-47a3-b213-8363f51d6228.png)
