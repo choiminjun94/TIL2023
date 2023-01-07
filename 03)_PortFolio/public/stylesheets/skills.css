@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+}
+#skills{
+    width: 100%;
+    text-align: center;
+}
+#SCB{
+    background-color: orange;
+    display: flex;
+    flex-wrap: wrap;
+    padding : 10px;
+}
+#frontend{
+    margin : 1.5%;
+    /* margin-left: 2%; */
+    /* margin-right:2%; */
+    background-color: white;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+#frontend img{
+    margin: 8%;
+}
+#html,#css,#js{
+    margin: 8px 25px;
+    width: 70px;
+    height: 100px;
+}
+#react{
+    margin: 0;
+    width: 150px;
+    height: 100px;
+}
+
+#backend{
+    margin : 1.5%;
+    background-color: white;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+}
+#mongodb{
+    margin: 22.5px 25px;
+    width: 200px;
+    height: 65px;
+}
+#mySQL{
+    width: 200px;
+    height: 114px;
+}
+#nodejs{
+    margin: 8px 25px;
+    width: 150px;
+    height: 65px
+}
+#Deployment{
+    margin : 1.5%;
+    background-color: white;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+}
+#firebase{
+    width: 115px;
+    height: 114px;
+}
+#netify{
+    margin: 35px 25px;
+    width: 200px;
+    height: 65px;
+}
+#IDE{
+    height: 450px;
+    margin : 1.5%;
+    background-color: white;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+}
+#Eclipse{
+    width: 200px;
+    height: 114px;
+}
+#vscode{
+    margin: 22.5px 25px;
+    width: 200px;
+    height: 65px;
+}
+#py,#intel{
+    margin: 22.5px 25px;
+    width: 150px;
+    height: 65px;
+}
