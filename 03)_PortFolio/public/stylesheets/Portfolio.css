@@ -42,6 +42,7 @@ header{
     display: flex;
     align-items: center;
 }
+
 /* 배너 */
 #imageContainer {
     width: 100%;
