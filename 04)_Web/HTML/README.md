@@ -61,3 +61,73 @@ ex)
 
 ```
 ![image](https://user-images.githubusercontent.com/60457431/229813697-33a3aa51-24ce-4939-b553-c3d344e91043.png)
+
+# 0406
+
+## CSS 파일 적용
+
+CSS는 사용하기 위해서는 .css의 파일 생성하면 된다. 
+생성한 CSS를 적용하기 위해서는 아래와 같이 하면 된다.
+
+``` html 
+
+<head>
+        <link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+```
+
+## CSS 선언
+
+CSS를 선언하는 방법은 3가지가 있다. 
+1. class
+2. tag
+3. id
+
+높은 우선순위인것은 
+
+id > class > tag 순이다. 
+밑에  코드에서 확인
+
+### CSS 파일
+
+``` CSS
+
+/* clsss */
+/* class는 스타일을 묶는 단위 */
+.profile{
+    width: 200px; 
+    display: block; 
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+/* Class말고 다르게 스타일 넣기*/
+
+/* 태그 전체에 적용 */
+p {
+    text-align:center; 
+    font-weight: 500;
+    color: blueviolet;
+}
+/* ID 적용 - 요즘엔 크게 쓰지 않는다.*/
+#Id_test {
+    text-align:center; 
+    font-weight: 500;
+}
+
+```
+### html 파일
+``` HTML
+
+ <!-- 이미지 가운데 정렬 -->
+    <img src="./img/lion.png" alt="프로필사진" class="profile">
+    <!-- font 스타일 -->
+    <!-- letter-space : 자간 조절 -->
+    <h3 class="mainName">Minjun</h3>
+    <!-- 글자 가운데 정렬 -->
+    <p id="Id_test" class="jab">Front-end Developer</p>
+    <!--  -->
+    <p>私は2023年にもう一同日本で仕事をするつもりだ！</p>
+
+```
