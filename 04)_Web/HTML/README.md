@@ -133,3 +133,38 @@ p {
 ```
 
 ![image](https://user-images.githubusercontent.com/60457431/230487454-78182b73-d6ce-4bff-8664-7efefcc52bff.png)
+
+## BOX 디자인
+
+```CSS
+
+.box{
+    text-align:center; 
+    width: 500px;
+    background-color: cadetblue;
+    /* 상하좌우 여백 지정 */
+    margin: 30px;
+    /* 상하좌우 안쪽 여뱍 */
+    padding: 40px;
+    /* 테두리 */
+    border: 4px solid black;
+    /* 테두리 둥글게 */
+    border-radius: 15px;
+
+    /* 우측하단 그림자 */
+    box-shadow: 5px 5px; 
+    /* 가운데 정렬 */
+    /*   display: block; - 가로행을 전부 차지 */
+    display: block; 
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+```
+
+``` html
+
+    <div class="box"><p class="boxContent">私は2023年にもう一同日本で仕事をするつもりだ！</p></div>
+
+```
+
