@@ -226,5 +226,6 @@ float, clear: both 이렇게 2개만 기억하면 된다.
 }
 
 ```
+![image](https://user-images.githubusercontent.com/60457431/231169204-9a7f32c6-f001-4ed9-9b9f-c3b69e4d4c1a.png)
 
 
