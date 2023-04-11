@@ -170,4 +170,61 @@ p {
 
 ![image](https://user-images.githubusercontent.com/60457431/230493517-795ece06-bb13-4167-a78c-6cfd2a7901a6.png)
 
+# 0411 
+## 레이아웃 만들기 1 
+
+### HTML
+``` html 
+   <!-- 감싸는 부분 -->
+    <div class="container">
+        <!-- header part  -->
+        <div class="header"></div>
+        <!-- 왼쪽 -->
+        <div class="left-menu"></div>
+        <!-- 오른쪽 -->
+        <div class="content"></div>
+        <div class="footer"></div>
+    </div>
+``` 
+``` text
+사실상 여기서 제일 중요한 CSS는 전부 주석처리를 해두었다.
+float, clear: both 이렇게 2개만 기억하면 된다.
+```
+### CSS
+``` css 
+
+.container{
+    width: 800px;
+}
+.header{
+    /* 부모태그 width의 100% */
+    width: 100%;
+    height: 100px;
+    background: red;
+}
+.left-menu{
+    width: 20%;
+    height: 400px;
+    background: cornflowerblue;
+    /* 요소를 붕 띄어서 왼쪽정렬 */
+    float: left;
+}
+.content{
+    width: 80%;
+    height: 400px;
+    background: coral;
+    /* 요소를 붕 띄어서 왼쪽정렬 */
+    float: right;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    background: gray;
+    /* float 다음에 오는 요소에게 주면 */
+    /* float로 발생하는 이상한 현상 해결가능  */
+    clear: both;
+}
+
+```
+
 
