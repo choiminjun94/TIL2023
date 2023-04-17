@@ -1,0 +1,47 @@
+.parent{
+    width: 100%;
+    height: 300px;
+}
+.left-box{
+    width: 80%;
+    height: 300px;
+    background-color: yellow;
+    float: left;
+}
+.left-box-parent{
+    width: 100%;
+}
+.left-box1{
+    margin:10px 30px;
+ 
+    height: 80px;
+    background-color: black;
+}
+.left-box2{
+    margin:10px 30px;
+ 
+    height: 180px;
+   
+}
+.left-box4{
+    margin:10px 100px;
+}
+.right-box{
+    width: 19.5%;
+    height: 300px;
+    float: right;
+}
+.image{
+    width: 300px; 
+    display: block; 
+    margin-right: auto; 
+    margin-left: auto;
+}
+.small_image{
+    width: 80px;
+    margin: 0px 20px;
+}
+.name{
+    width: 100px;
+    height: 100px;
+}
