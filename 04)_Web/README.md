@@ -240,6 +240,7 @@ float, clear: both 이렇게 2개만 기억하면 된다.
 ```
 
 ### 예시
+![1](https://user-images.githubusercontent.com/60457431/232493333-a9ccbdf3-384f-4782-a8cb-8293e040be35.png)
 
 HTML
 ``` html 
@@ -282,6 +283,7 @@ CSS
 ```
 그냥 display: inline-block을 할 시 HTML를 붙여하는 불편함이 있다. <br>
 이를 방지 하는 방법 중 하나가 부모 태그에 font-size: 0px를 넣는것이다. 
+![2](https://user-images.githubusercontent.com/60457431/232493359-a115706d-53bf-4d70-933f-f742001c9296.png)
 
 HTML
 ```html 
