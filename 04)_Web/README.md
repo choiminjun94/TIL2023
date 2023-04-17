@@ -228,4 +228,71 @@ float, clear: both 이렇게 2개만 기억하면 된다.
 ```
 ![image](https://user-images.githubusercontent.com/60457431/231169204-9a7f32c6-f001-4ed9-9b9f-c3b69e4d4c1a.png)
 
+# 0417 
+
+### inline-block란 
+
+``` text
+
+ display : block -> 가로로 한행을 전부 차지 
+ display: inline-block; : 내 크기만큼 차지 
+
+```
+
+### 예시
+
+HTML
+``` html 
+<body>
+    <!-- 감싸는 부분 -->
+    <div class="container">
+        <!-- header part  -->
+        <div class="header"></div>
+        <!-- 왼쪽 -->
+        <div class="left-menu"></div><div class="content"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+```
+CSS
+
+``` CSS 
+
+... 
+.left-menu{
+    width: 20%;
+    height: 400px;
+    background: cornflowerblue;
+    /* display : block -> 가로로 한행을 전부 차지 */
+    /*     display: inline-block; : 내 크기만큼 차지 */
+    /* 띄어쓰기를 하는것이 문제임 */
+    display: inline-block;
+    
+}
+.content{
+    width: 80%;
+    height: 400px;
+    background: coral;
+    /* display : block -> 가로로 한행을 전부 차지 */
+    /*     display: inline-block; : 내 크기만큼 차지 */
+    display: inline-block;
+}
+....
+
+```
+그냥 display: inline-block을 할 시 HTML를 붙여하는 불편함이 있다. <br>
+이를 방지 하는 방법 중 하나가 부모 태그에 font-size: 0px를 넣는것이다. 
+
+HTML
+```html 
+    <div class="container" style="font-size: 0px;">
+        <!-- header part  -->
+        <div class="header"></div>
+        <!-- 왼쪽 -->
+        <div class="left-menu"></div>
+         <div class="content"></div>
+        <div class="footer"></div>
+    </div>
+``` 
+
 
