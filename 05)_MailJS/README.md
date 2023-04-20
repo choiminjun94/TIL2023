@@ -36,4 +36,75 @@ URL : https://www.emailjs.com/
 
 ![8](https://user-images.githubusercontent.com/60457431/233312369-440b0ae7-7528-4133-8b1c-ce97abb72f5c.png)
 
+### 06. Docs에서 Browser Script 가져오기
+
+URL : https://www.emailjs.com/docs/sdk/installation/
+
+```HTML
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY");
+   })();
+</script>
+
+```
+
+### YOUR_PUBLIC_KEY 가져오기
+
+EmailJS 메인 홈페이지 → Account → API Keys
+
+### 07. HTML 작성
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="from_name" placeholder="Name" required><br/>
+        <input type="email" id="email_id" placeholder="Email" required><br/>
+        <textarea id="message" placeholder="Message" id="" cols="30" rows="10"></textarea>
+        <br/>
+        <button onclick="SendMail()">Send</button>
+    </div>
+</body>
+</html>
+
+```
+
+### 08. JS 작성
+
+```JS
+
+function SendMail(){
+    var params = {
+        from_name : document.getElementById("from_name").value,
+        email_id : document.getElementById("email_id").value,
+        message : document.getElementById("message").value
+    }
+    emailjs.send("service_xown5ck", "template_7w7kpwi", params).then(function (res){
+        console.log("Success !" + res.status);
+    })
+}
+
+```
+
 
