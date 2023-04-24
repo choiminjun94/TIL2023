@@ -1,0 +1,23 @@
+.main{
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main_board{
+  width: 80%;
+  height: 200px;
+  float: left;
+}
+.image_board{
+  width: 20%;
+  height: 200px;
+    float: left;
+}
+.name_part{
+  float: left;
+  margin: 8px 5px;
+}
+.name{
+  margin: 5px;
+}
