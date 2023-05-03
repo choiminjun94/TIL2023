@@ -6,11 +6,11 @@ show DATABASES;
 
 use world;
 
--- 데이터베이스 world의 데이블 이름 보기
+-- 데이터베이스 테이블 이름 보기
 
 show tables;
 
--- 데이터베이스의 데이블 정보 조회
+-- 데이터베이스의 테이블 정보 조회
 
 show table status;
 
