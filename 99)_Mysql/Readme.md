@@ -25,6 +25,7 @@ use world;
 ``` sql 
 show tables;
 ```
+
 ![3](https://user-images.githubusercontent.com/60457431/236145424-7a1bcaea-d920-4beb-95cf-3a8075d3abc0.png)
 
 
@@ -34,16 +35,26 @@ show tables;
 show table status;
 ```
 
+![4](https://user-images.githubusercontent.com/60457431/236145582-e8425602-57ac-4e11-83c6-142850912557.png)
+
 ## 무슨 열이 있는지 확인 //속성 정보
 
 ``` sql
 desc city;
 ```
-![4](https://user-images.githubusercontent.com/60457431/236145582-e8425602-57ac-4e11-83c6-142850912557.png)
+
+![5](https://user-images.githubusercontent.com/60457431/236145865-d2b0c8ae-d29e-4241-a7e7-9ff7b80d9434.png)
 
 
 -- country 테이블과 countrylanguage 정보보기
 
+```  sql
 desc country;
 
 desc countrylanguage;
+```
+
+![6](https://user-images.githubusercontent.com/60457431/236145940-08350aa5-19d2-4203-b039-1ef0ad518244.png)
+
+![7](https://user-images.githubusercontent.com/60457431/236145970-7d1329e2-f81a-4621-b04b-530c75cafaf7.png)
+
