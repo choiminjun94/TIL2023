@@ -1,22 +1,46 @@
--- 현재 서버에 어떤 DB가 있는지 보기
+# MYSQL 쿼리 정리
 
+## 1일차 
+
+### 현재 서버에 어떤 DB가 있는지 보기
+
+``` sql 
 show DATABASES;
+```
 
--- 사용할 데이터베이스 지정
+![1](https://user-images.githubusercontent.com/60457431/236145038-1384b185-d531-4654-b2bc-e25dc7060c91.png)
 
+
+### 사용할 데이터베이스 지정
+
+``` sql
 use world;
+``` 
 
--- 데이터베이스 테이블 이름 보기
+![2](https://user-images.githubusercontent.com/60457431/236145263-f4e79613-5915-404f-8fd7-eb5e2258a17b.png)
 
+
+### 데이터베이스 테이블 이름 보기
+
+``` sql 
 show tables;
+```
+![3](https://user-images.githubusercontent.com/60457431/236145424-7a1bcaea-d920-4beb-95cf-3a8075d3abc0.png)
 
--- 데이터베이스의 테이블 정보 조회
 
+##  데이터베이스의 테이블 정보 조회
+
+```sql
 show table status;
+```
 
--- 무슨 열이 있는지 확인 //속성 정보
+## 무슨 열이 있는지 확인 //속성 정보
 
+``` sql
 desc city;
+```
+![4](https://user-images.githubusercontent.com/60457431/236145582-e8425602-57ac-4e11-83c6-142850912557.png)
+
 
 -- country 테이블과 countrylanguage 정보보기
 
