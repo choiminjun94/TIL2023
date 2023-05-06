@@ -8,14 +8,12 @@
 .blog-contect {
     width: 80%;
     height: 200px;
-    background-color: #eee;
     float: left;
 }
 
 .blog-image {
     width: 20%;
     height: 200px;
-    background-color: yellow;
     float: left;
 }
 .blog-profile{
