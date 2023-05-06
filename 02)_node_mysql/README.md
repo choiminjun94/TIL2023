@@ -103,7 +103,11 @@ npm install path --save
 ``` 
 ### 파일 구성 
 
+<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/60457431/209553537-75807d30-45af-4713-b57a-35975cdad3af.png)
+=======
+// 사진 추가 
+>>>>>>> d8eeb65 (폴더 구성 및 index.js와 app.js 작성)
 
 ### router 폴더의 역할 
 ``` js
@@ -233,6 +237,7 @@ module.exports = app;
 11) index.js를 indexRouter라는 변수에 선언
 12) 화면을 렌더링 실시
 
+<<<<<<< HEAD
 ```
 
 ![image](https://user-images.githubusercontent.com/60457431/209553584-9748d968-c897-4bb7-bc35-fa2a7d7c3d78.png)
@@ -269,3 +274,6 @@ frontend/view/index.html
 ### 실행 사진
 
 ![image](https://user-images.githubusercontent.com/60457431/210172897-3366ed8d-aa22-467d-ac3f-657bcf9f6022.png)
+=======
+```
+>>>>>>> d8eeb65 (폴더 구성 및 index.js와 app.js 작성)
