@@ -157,51 +157,94 @@ SELECT \* from city where CountryCode in('kor', 'jpn', 'usa') and Population BET
 
 ## DAY3
 
--- 요구하는 데이터를 가져오는 구분 SELECT
-show databases;
-use world;
 
--- 문자열의 내용 검색하기 위해 Like 연산자 사용
--- 문자 뒤에 %-에 무엇이든 (%) 허용
--- 한 글자와 매치하기 위해서는 '\_'사용
+## 문자열의 내용 검색하기 위해 Like 연산자 사용
+## 문자 뒤에 %-에 무엇이든 (%) 허용
+## 한 글자와 매치하기 위해서는 '\_'사용
+
+```sql
 SELECT \* from city where CountryCode like 'Ko%'
 
 SELECT \* from city where CountryCode like 'Ko\_'
+```
+![1](https://user-images.githubusercontent.com/60457431/236684949-3236427b-4474-4c72-9035-1826ed7b0d5a.png)
 
--- 중요 [Sub Query]
--- 쿼리문 안에 또 퀄리문이 들어 있는것
--- 서브쿼리의 결과가 둘 이상이 되면 에러 발생
+![2](https://user-images.githubusercontent.com/60457431/236684957-0a9dd63d-0988-4901-920f-40616432c5b3.png)
 
+
+## 중요 [Sub Query]
+## 쿼리문 안에 또 퀄리문이 들어 있는것
+## 서브쿼리의 결과가 둘 이상이 되면 에러 발생
+
+``` sql
 SELECT \* from city WHERE CountryCode =( SELECT CountryCode from city WHERE name = 'new york');
+```
 
--- [ANY]
--- 서브쿼리의 여러개의 결과 중 한가지만 만족해도 가능
--- SOME은 ANY와 동일한 의미로 사용
--- ANY구문은 IN과 동일한 의미
+![3](https://user-images.githubusercontent.com/60457431/236684978-50811b33-4a5e-4b34-bb1f-b03a82b86551.png)
 
+## [ANY]
+## 서브쿼리의 여러개의 결과 중 한가지만 만족해도 가능
+## SOME은 ANY와 동일한 의미로 사용
+## ANY구문은 IN과 동일한 의미
+
+``` sql
 SELECT \* from city where Population > ANY ( SELECT Population from city WHERE District = 'new york');
+``` 
 
--- [ALL]
--- 서브쿼리의 여러 개의 결과를 모두 만족 시켜야 함
+![4](https://user-images.githubusercontent.com/60457431/236685001-a9a8a1d4-8e47-4479-8519-8dedccaf9e22.png)
 
+
+## [ALL]
+## 서브쿼리의 여러 개의 결과를 모두 만족 시켜야 함
+
+``` sql 
 SELECT \* FROM city WHERE Population > all (SELECT Population from city WHERE District = 'new york');
+``` 
 
--- [ORDER BY No.1]
--- 결과문에 대해 영향을 미치지는 않음
--- 결과가 출력되는 순서를 조절하는 구문
--- 기본적으로는 오름차순(ASC)이다.
--- 내림차순 (DESC)
+![5](https://user-images.githubusercontent.com/60457431/236685018-b6eec9bd-6011-4650-9a9c-985f7fa05fe8.png)
 
+
+## [ORDER BY No.1]
+## 결과문에 대해 영향을 미치지는 않음
+## 결과가 출력되는 순서를 조절하는 구문
+## 기본적으로는 오름차순(ASC)이다.
+## 내림차순 (DESC)
+
+``` sql
 select _ from city order by Population desc;
 select _ from city order by Population;
+``` 
 
--- [ORDER BY No.2]
--- 혼합해 사용하는 구문
+![6](https://user-images.githubusercontent.com/60457431/236685083-3f196267-d772-46b6-8cee-bfcbee7cef19.png)
+
+![7](https://user-images.githubusercontent.com/60457431/236685090-e03588ae-ec9e-4952-ae73-37d93fbd072c.png)
+
+
+## [ORDER BY No.2]
+## 혼합해 사용하는 구문
+
+``` sql 
 SELECT \* from city order by CountryCode asc, Population desc;
+``` 
 
--- [과제]
--- 한국에는 도시 인구수 내림차순으로 출력
+![8](https://user-images.githubusercontent.com/60457431/236685109-f70fefdc-4b76-4bea-91a8-846b3185e6d8.png)
+
+
+## [과제]
+## 한국에는 도시 인구수 내림차순으로 출력
+
+``` sql
 select \* from city where CountryCode ='kor' order by Population desc;
+```
 
--- 국가면적 크기로 내림차순
+![9](https://user-images.githubusercontent.com/60457431/236685135-a1a7fd8c-eee6-4359-9e1d-fd274732afc7.png)
+
+
+
+## 국가면적 크기로 내림차순
+
+``` sql 
 SELECT \* from country order by SurfaceArea desc;
+``` 
+
+![10](https://user-images.githubusercontent.com/60457431/236685154-51554c76-736e-41cc-9c36-25996fb49d63.png)
