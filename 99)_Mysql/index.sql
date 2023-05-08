@@ -116,7 +116,39 @@ select * from city where CountryCode ='kor' order by Population desc;
 -- 국가면적 크기로 내림차순 
 SELECT * from country order by SurfaceArea desc;
 
+-- [DISTINCT]
+-- 중복된 것은 1개씩만 보여주면서 출력 
+-- 데이블의 크기가 클수록 효율적
 
+SELECT DISTINCT  countryCode from city;
+
+
+-- [LIMIT]
+-- 출력 개수를 제한 
+-- 일부를 보기 위해 여러 건의 데이터를 출력
+-- 상위 N개만 출력하는 'LIMIT N' 구문을 사용
+
+SELECT * from city order by population desc limit 10;
+
+-- [Group BY]
+-- 그룹으로 묶어주는 역할
+-- 집계함수를 함께 사용
+-- AVG() : 평균 
+-- MIN() : 최소값
+-- MAX() : 최대값 
+-- Count() : 행의 개수
+-- count(distinct) : 중복제외된 행의 갯수
+-- sidev() : 표준편차
+-- VARIANCE() : 분산
+
+SELECT countrycode, max(population) from city group by CountryCode;
+
+-- [과제]
+-- 전체 도시는 ? 
+SELECT count(*) from city;
+
+-- 전체 도시들의 평균 인구수는 ??
+SELECT avg(population) from city;
 
 
 
