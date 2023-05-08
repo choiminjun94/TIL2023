@@ -268,6 +268,9 @@ SELECT \* from country order by SurfaceArea desc;
 SELECT DISTINCT  countryCode from city;
 ```
 
+![1](https://user-images.githubusercontent.com/60457431/236849271-c053a5cd-3245-4e5b-883a-e5b41ab84425.png)
+
+
 ## [LIMIT]
 
 ## 출력 개수를 제한
@@ -279,6 +282,9 @@ SELECT DISTINCT  countryCode from city;
 ```sql
 SELECT * from city order by population desc limit 10;
 ```
+
+![2](https://user-images.githubusercontent.com/60457431/236849314-03477784-d7f8-4006-8c3c-75882f260d6b.png)
+
 
 ## [Group BY]
 
@@ -298,6 +304,10 @@ VARIANCE() : 분산
 SELECT countrycode, max(population) from city group by CountryCode;
 ```
 
+![3](https://user-images.githubusercontent.com/60457431/236849342-3af52a4a-6ef5-48f8-a58d-89b196f64729.png)
+
+
+
 ## [과제]
 
 ## 전체 도시는 ?
@@ -306,8 +316,16 @@ SELECT countrycode, max(population) from city group by CountryCode;
 SELECT count(\*) from city;
 ```
 
+![4](https://user-images.githubusercontent.com/60457431/236849373-63125f77-2d20-47df-9b29-c1ff10cba466.png)
+
+
+
 ## 전체 도시들의 평균 인구수는 ??
 
 ```sql
 SELECT avg(population) from city;
 ```
+
+![5](https://user-images.githubusercontent.com/60457431/236849404-d4b01399-e224-4a4c-93f2-2d83be8d930a.png)
+
+
