@@ -336,6 +336,9 @@ SELECT avg(population) from city;
 SELECT countrycode, max(population) 'max population' from city group by CountryCode having max(Population) > 8000000;
 ```
 
+![1](https://github.com/choiminjun94/TIL2023/assets/60457431/ecc59c60-1934-4914-a0b8-6255f04c162f)
+
+
 ## [rollup]
 
 ## 총합 또는 중간합계가 필요한 경우 사용
@@ -346,6 +349,9 @@ SELECT countrycode, max(population) 'max population' from city group by CountryC
 SELECT countrycode, name, sum(population) from city group by CountryCode, name with ROLLUP;
 ```
 
+![2](https://github.com/choiminjun94/TIL2023/assets/60457431/38eaede9-6351-4b16-af4c-7802cb9657e4)
+
+
 ## [join]
 
 ## 데이터베이스 내의 여러 데이블에서 가져온 레코드를 조합하여 하나의 테이블이나 결과 집합으로 표현
@@ -354,6 +360,9 @@ SELECT countrycode, name, sum(population) from city group by CountryCode, name w
 select * from city join country on city.CountryCode = country.code;
 ```
 
+![3](https://github.com/choiminjun94/TIL2023/assets/60457431/ecdd6c9a-6a1e-4c73-b6af-7656482ad912)
+
+
 ## [과제]
 
 ## city, country, countrylanguage 테이블3개를 join
@@ -361,3 +370,7 @@ select * from city join country on city.CountryCode = country.code;
 ```sql
 select * from city join country on city.CountryCode = country.code join countrylanguage on city.CountryCode  = countrylanguage.CountryCode;
 ```
+
+![스크린샷 2023-05-09 오후 11 10 58](https://github.com/choiminjun94/TIL2023/assets/60457431/dadb75fe-e351-494b-96ea-d6918a6aacdd)
+
+
