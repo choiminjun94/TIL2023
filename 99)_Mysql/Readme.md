@@ -270,7 +270,6 @@ SELECT DISTINCT  countryCode from city;
 
 ![1](https://user-images.githubusercontent.com/60457431/236849271-c053a5cd-3245-4e5b-883a-e5b41ab84425.png)
 
-
 ## [LIMIT]
 
 ## 출력 개수를 제한
@@ -284,7 +283,6 @@ SELECT * from city order by population desc limit 10;
 ```
 
 ![2](https://user-images.githubusercontent.com/60457431/236849314-03477784-d7f8-4006-8c3c-75882f260d6b.png)
-
 
 ## [Group BY]
 
@@ -306,8 +304,6 @@ SELECT countrycode, max(population) from city group by CountryCode;
 
 ![3](https://user-images.githubusercontent.com/60457431/236849342-3af52a4a-6ef5-48f8-a58d-89b196f64729.png)
 
-
-
 ## [과제]
 
 ## 전체 도시는 ?
@@ -318,8 +314,6 @@ SELECT count(\*) from city;
 
 ![4](https://user-images.githubusercontent.com/60457431/236849373-63125f77-2d20-47df-9b29-c1ff10cba466.png)
 
-
-
 ## 전체 도시들의 평균 인구수는 ??
 
 ```sql
@@ -328,4 +322,42 @@ SELECT avg(population) from city;
 
 ![5](https://user-images.githubusercontent.com/60457431/236849404-d4b01399-e224-4a4c-93f2-2d83be8d930a.png)
 
+## DAY 5
 
+## [HAVING]
+
+## WHERE과 비슷한 개념으로 조건 제한
+
+## 집계함수에 대해서 조건제한 하는 편리한 개념
+
+## HAVING절은 반드시 GROUP BY절 다음에 나와야 함
+
+```sq;
+SELECT countrycode, max(population) 'max population' from city group by CountryCode having max(Population) > 8000000;
+```
+
+## [rollup]
+
+## 총합 또는 중간합계가 필요한 경우 사용
+
+## group by절과 함께 with rollup문 사용
+
+```sq;
+SELECT countrycode, name, sum(population) from city group by CountryCode, name with ROLLUP;
+```
+
+## [join]
+
+## 데이터베이스 내의 여러 데이블에서 가져온 레코드를 조합하여 하나의 테이블이나 결과 집합으로 표현
+
+```sq;
+select * from city join country on city.CountryCode = country.code;
+```
+
+## [과제]
+
+## city, country, countrylanguage 테이블3개를 join
+
+```sql
+select * from city join country on city.CountryCode = country.code join countrylanguage on city.CountryCode  = countrylanguage.CountryCode;
+```

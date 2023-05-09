@@ -150,6 +150,30 @@ SELECT count(*) from city;
 -- 전체 도시들의 평균 인구수는 ??
 SELECT avg(population) from city;
 
+-- [HAVING] 
+-- WHERE과 비슷한 개념으로 조건 제한 
+-- 집계함수에 대해서 조건제한 하는 편리한 개념 
+-- HAVING절은 반드시 GROUP BY절 다음에 나와야 함 
+
+SELECT countrycode, max(population) 'max population' from city group by CountryCode having max(Population) > 8000000;
+
+-- [rollup]
+-- 총합 또는 중간합계가 필요한 경우 사용
+-- group by절과 함께 with rollup문 사용 
+
+SELECT countrycode, name, sum(population) from city group by CountryCode, name with ROLLUP;
+
+-- [join]
+-- 데이터베이스 내의 여러 데이블에서 가져온 레코드를 조합하여 하나의 테이블이나 결과 집합으로 표현 
+
+select * from city join country on city.CountryCode = country.code;
+
+
+-- [과제]
+-- city, country, countrylanguage 테이블3개를 join
+
+select * from city join country on city.CountryCode = country.code join countrylanguage on city.CountryCode  = countrylanguage.CountryCode;
+
 
 
 
