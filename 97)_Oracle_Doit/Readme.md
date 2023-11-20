@@ -4,6 +4,9 @@
 ## 기본서 공부 기록
 
 ### emp 테이블이 없어서 생성 
+
+```sql
+
 CREATE TABLE EMP (
  EMPNO               NUMBER(4) NOT NULL,
  ENAME               VARCHAR2(10),
@@ -14,7 +17,11 @@ CREATE TABLE EMP (
  COMM                NUMBER(7,2),
  DEPTNO              NUMBER(2) 
  );
- 
+
+```
+
+ ```sql
+
 INSERT INTO EMP VALUES (7839,'KING','PRESIDENT',NULL,TO_DATE('1981-11-17','YYYY-MM-DD'),5000,NULL,10);
 INSERT INTO EMP VALUES (7698,'BLAKE','MANAGER',7839,TO_DATE('1981-05-01','YYYY-MM-DD'),2850,NULL,30);
 INSERT INTO EMP VALUES (7782,'CLARK','MANAGER',7839,TO_DATE('1981-05-09','YYYY-MM-DD'),2450,NULL,10);
@@ -32,51 +39,105 @@ INSERT INTO EMP VALUES (7934,'MILLER','CLERK',7782,TO_DATE('1982-01-11','YYYY-MM
 
 COMMIT;
 
+ ```
+
+
 ## Day.1 (DO it)
 
 ### 데이터 출력  테이블 전체 열 출력 
+```sql
+
 SELECT * FROM emp;
 
+```
+
 ### 테이블 부분열만 출력 (사원번호, 이름, 부서)
+```sql
+
 SELECT empno, ename, job FROM emp;
 
+```
+
 ### 복습 (사원번호 부서번호 출력)
+```sql
+
 SELECT empno, deptno FROM emp; 
+
+```
+
 
 ### 열 제거
 ### 중복 열 제거 (DISTINCT)
+```sql
+
 SELECT  DISTINCT deptno FROM emp; 
 
+```
+
 ### 여러 중복열 제거
+```sql
+
 SELECT DISTINCT job, deptno FROM emp;
+
+```
 
 ### 별칭 지정
 ### 별칭 (열과 연산식 )
+```sql
+
 SELECT ename, sal, sal*12+Comm,comm FROM emp;
 
+```
+
 ### 별칭 지정2 (as)
+```sql
+
 SELECT ename AS 이름, sal AS 월급, sal*12+comm AS 연간총수입, comm FROM emp; 
 
+```
 ### 원하는 순서로 출력 데이터를 정렬 (order by)
 ### 오름차순
+```sql
+
 SELECT * FROM emp ORDER BY sal;
 
+```
+
 ### 복습 (사원번호 오름차순)
+```sql
+
  SELECT * FROM emp ORDER BY empno;
- 
+
+``` 
 ### 급여 내림차순 (desc)
+```sql
+
 SELECT * FROM emp ORDER BY sal DESC; 
 
+```
 ### 오름차순과 내림차순 동시에 사용
+```sql
+
 SELECT * 
 	FROM emp 
 ORDER BY DEPTNO, sal DESC;
 
+```
+
+
 ### 과제 (잡 중복 제거하기)
+```sql
+
 SELECT DISTINCT  job AS 직업 FROM emp; 
+
+```
+```sql
 
 SELECT empno AS "EMPLOYEE_NO", ename AS "EMPLOYEE_NAME", job, MGR  AS "MANAGER", hiredate ,sal AS "SALARY", comm AS "COMMISSION", deptno AS "DEPARTMENT_NO" 
 
 	FROM emp ORDER BY EMPNO DESC, ENAME ;
+	
+```
+
 
 
