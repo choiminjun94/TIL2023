@@ -103,3 +103,5 @@ SELECT ename, sal FROM emp ORDER BY sal ASC;
 SELECT ename AS "이름", DEPTNO  AS "부서번호", sal AS "월급" 
 	FROM emp 
 ORDER BY DEPTNO asc , sal desc; 
+
+
