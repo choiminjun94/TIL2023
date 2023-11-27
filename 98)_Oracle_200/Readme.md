@@ -253,4 +253,100 @@ FROM emp
 WHERE job='SALESMAN' AND sal > 1200;
 
 ```
+## Day.3 (200제)
+### 016) 대소문자 변환 함수 (Upper, Lower, INITCAP)
+```sql
 
+SELECT upper(ename), lower(ename), INITCAP(ename) FROM emp;
+
+```
+
+ ### 016.1) scott인 사원의 이름 및 월급 조회
+ ```sql
+
+ SELECT ename, sal 
+ FROM emp 
+ WHERE LOWER(ename) = 'scott'; 
+
+ ```
+
+ ### 017) 문자에서 특정 철자 추출하기 (SUBSTR)
+ ### SMITH에서 SMI만 잘라서 추출
+```sql 
+
+SELECT substr('SMITH', 1,3) FROM dual; 
+
+```
+
+### 018) 문자열의 길이를 출력 (LENGTH)
+### 이름을 출력하고 그 옆에 이름의 철자 갯수를 출력
+```sql
+
+SELECT ename, LENGTH(ename) FROM emp;
+
+```
+### 바이트의 길이 반환
+```sql 
+
+SELECT LENGTHB('가나다라마') FROM dual; 
+
+```
+
+### 019) 문자에서 특정 철자의 위치 출력(INSTR)
+```sql 
+
+SELECT INSTR('SMITH', 'M') FROM dual;
+
+SELECT instr('abcdefg@naver.com', '@') FROM dual;
+
+```
+
+
+### 020) 특정철자를 다른 철자로 변경 (REPLACE)
+```sql 
+
+SELECT ename, REPLACE (sal, 0, '*') FROM emp;
+
+```
+### 정규식 변경 (REGEXP_REPLACE)
+```sql 
+
+SELECT ename, REGEXP_REPLACE(sal, '[0-3]', '*') AS salary FROM emp; 
+
+```
+
+### 021) 특정 철자를 N개 만큼 채우기
+```sql 
+
+SELECT ename, lpad(sal, 10, '*') AS salary1, rpad(sal, 10, '#') AS salary2 FROM emp;
+
+```
+
+### 022) 특정 철자 잘라내기 (TRIM, RTRIM, LTRIM)
+```sql
+
+ SELECT 'smith', ltrim('simth', 's'), RTRIM('smith','h'), TRIM('s' FROM 'smiths') FROM dual; s
+
+``` 
+
+### 022.1) 데이터가 안나올시 공백 때문일수도,...
+```sql 
+
+SELECT ename, sal FROM emp WHERE ename = 'JACK';
+SELECT ename, sal FROM emp WHERE RTRIM(ename) = 'JACK'; 
+
+```
+
+### 023) 반올림해서 출력 (ROUND)
+```sql
+
+SELECT '876.543' AS 숫자, round(876.567,1 ) FROM dual;
+
+```
+
+### 024) 숫자를 버리고 출력(TRUNC) 
+```sql
+
+SELECT '876.422' AS 숫자, trunc(853.432,1) FROM dual;
+
+```

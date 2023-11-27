@@ -115,7 +115,7 @@ SELECT ename, sal, job
 FROM emp
 WHERE job='SALESMAN' AND sal > 1200;
 
--- Day.2 (200제)
+-- Day.3 (200제)
  -- 016) 대소문자 변환 함수 (Upper, Lower, INITCAP)
  SELECT upper(ename), lower(ename), INITCAP(ename) FROM emp;
 
