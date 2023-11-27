@@ -232,7 +232,125 @@ AND ENAME LIKE '%E%'
 AND SAL NOT BETWEEN 1000 AND 2000;
 
 -- ========================================================================= -- 
+-- Day.3 (DO it)
 
+-- 함수 
+-- 문자 함수 
+-- upper(전부 대문자), lower(전부 소문자), initcap(첫글만 대문자)
+
+SELECT Ename, upper(ename), lower(ename), INITCAP(ename)
+FROM emp;
+
+-- Upper 함수로 문자열 비교 (사원이름 SCOTT인 데이터 찾기)
+SELECT * FROM emp
+WHERE UPPER(ENAME) = upper('scott'); 
+
+-- Upper 함수로 문자열 비교 (사원이름에 SCOTT 단어를 포함한 데이터 찾기)
+SELECT * FROM emp
+WHERE upper(ENAME) LIKE upper('%scott%');
+
+-- 사원이름 대문자로 출력
+SELECT UPPER(ename)  FROM emp;
+
+-- Length 함수
+SELECT INITCAP(ename), LENGTH (ename) AS "문자열 길이" FROM emp;
+	
+
+-- where절 Length 함수 활용
+SELECT ename, LENGTH (ename) FROM emp
+WHERE LENGTH(ename) >= 5;
+
+-- 바이트 수 반환 (LENGTHB)
+-- 직책 이름이 6글자 이상인 데이터만 출력
+SELECT ENAME, job, LENGTHB(job) FROM emp WHERE LENGTHB(job) >= 6; 
+
+-- 문자열 일부를 추출(substr)
+-- substr(문자열 데이터, 시작위치, 추출길이)
+-- substr(문자열 데이터, 시작위치)
+SELECT job, substr(job,1,2), substr(job,3,2), SUBSTR(job,5) FROM emp; 
+
+-- 모든 사원 이름을 세번째 글자부터 끝까지 출력 
+SELECT ename, substr(ename, 3) FROM emp;
+
+-- INSTR(문자열 데이터 안에 특정 문자나 문자열이 어디에 포함되어 있는지 확인)
+-- INSTR [대상 문자열 데이터 필수(필수)]
+--		 [위치를 찾으려는 부분의 문자(필수)]
+--       [위치 찾기를 시작할 대상 문자열 데이터 위치(선택, 기본값은 1)]
+--       [시작 위치에서 찾으려는 문자가 몇번째인지 지정(선택, 기본값은 1)]
+SELECT INSTR ('HELLO, ORACLE!', 'L') AS instr_1,
+	   INSTR ('HELLO, ORACLE!', 'L',5) AS instr_1,
+	   INSTR ('HELLO, ORACLE!', 'L',2,2) AS instr_1
+FROM dual;
+
+-- instr함수로 사원이름에 문자 S가 있는 행 구하기
+SELECT * FROM emp WHERE instr(ENAME, 'S') > 0;
+SELECT * FROM emp WHERE ENAME LIKE '%S%';
+
+-- (replace)특정문자를 다른 문자로 바꾸기
+-- Replace([문자열 데이터 또는 열 이름(필수)]),[찾는 문자(필수)],[(대체할 문자(택)]
+SELECT '010-1234-5678' AS "바뀌기 전 번호",
+		REPLACE ('010-1234-5678', '-', ' ') AS 바꾸기1,
+		REPLACE ('010-1234-5678', '-') AS 바꾸기2 
+		FROM dual;
+	
+-- (L,RPAD)데이터의 빈 공간을 특정문자로 변경 
+SELECT 'Oracle',
+		LPAD('Oracle', 10, '#') AS Lpad_1,
+		RPAD('Oracle', 10, '*') AS Rpad_1,
+		LPAD('Oracle', 10) AS Lpad_2,
+		RPAD('Oracle', 10) AS Rpad_2
+		FROM DUAL;
+
+-- RPAD함수를 사용하여 개인정보 뒷자리 *표시 표현
+SELECT 
+	RPAD ('940311-', 14, '*')AS RPAD_JMMO,
+	RPAD ('010-1111-', 13, '*')AS RPAD_PHONE
+	FROM dual;
+	
+-- (CONCAT) 두 문자열 데이터를 합치
+SELECT CONCAT(empno,ename),
+	   CONCAT(empno,concat(' : ',ename))
+	   FROM emp
+	   WHERE ename = 'SCOTT';
+	  
+-- 특정문자를 지우기
+-- (TRIM) 
+SELECT '[' || TRIM(' _ _Oracle_ _ ') || ']' AS TRIM,
+       '[' || TRIM(LEADING FROM ' _ _Oracle_ _ ') || ']' AS TRIM_LEADING,
+       '[' || TRIM(TRAILING FROM ' _ _Oracle_ _ ') || ']' AS TRIM_TRAILING,
+       '[' || TRIM(BOTH FROM ' _ _Oracle_ _ ') || ']' AS TRIM_BOTH
+  FROM DUAL;
+ 
+ -- 특정 위치에서 반올림하는 ROUND 함수
+ -- ROUND([숫자(필수)], [반올림 위치(선택)])
+SELECT ROUND(1234.5678) AS ROUND,
+       ROUND(1234.5678, 0) AS ROUND_0,
+       ROUND(1234.5678, 1) AS ROUND_1,
+       ROUND(1234.5678, 2) AS ROUND_2,
+       ROUND(1234.5678, -1) AS ROUND_MINUS1,
+       ROUND(1234.5678, -2) AS ROUND_MINUS2
+  FROM DUAL;
+ 
+ 
+ -- 특정 위치에서 버리는 TRUNC 함수
+ -- TRUNC([숫자(필수)], [버림 위치(선택)])
+SELECT TRUNC(1234.5678) AS TRUNC,
+       TRUNC(1234.5678, 0) AS TRUNC_0,
+       TRUNC(1234.5678, 1) AS TRUNC_1,
+       TRUNC(1234.5678, 2) AS TRUNC_2,
+       TRUNC(1234.5678, -1) AS TRUNC_MINUS1,
+       TRUNC(1234.5678, -2) AS TRUNC_MINUS2
+  FROM DUAL;
+  
+ 
+ -- 지정한 숫자와 가까운 정수를 찾는 CEIL, FLOOR 함수
+ -- CEIL([숫자(필수)])
+ -- FLOOR([숫자(필수)])
+ SELECT CEIL(3.14),
+       FLOOR(3.14),
+       CEIL(-3.14),
+       FLOOR(-3.14)
+  FROM DUAL;
 
 
 
